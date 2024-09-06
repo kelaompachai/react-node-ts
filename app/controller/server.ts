@@ -1,3 +1,3 @@
 import hello from './hello';
 
-hello('world');
+hello('cheese');
