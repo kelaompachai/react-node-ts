@@ -1,3 +1,13 @@
-import hello from './hello';
+import express from 'express';
 
-hello('cheese');
+
+const app = express();
+const PORT: number = 3000;
+
+app.use('/', (req, res): void => {
+  res.json({what: 'cheese'});
+});
+
+app.listen(PORT, () => {
+  console.log('Server listening on port: ' + PORT)
+});
