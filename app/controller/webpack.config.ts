@@ -1,9 +1,11 @@
 import path from 'path';
 
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
 const ENTRY: string = path.join(__dirname, '..', 'view', 'build', 'index.js');
-console.log('ENTRY:', ENTRY);
+// console.log('ENTRY:', ENTRY);
 const EXIT: string = path.join(__dirname, '..', 'view', 'dist')
-console.log('EXIT:', EXIT);
+// console.log('EXIT:', EXIT);
 
 
 // may need to install @types/webpack for this to have any quality type checking
@@ -31,7 +33,8 @@ const webpackOptions = (env: any, argv: any): any => {
           }
         }
       ]
-    }
+    },
+    plugins: [new HtmlWebpackPlugin()]
   };
 
 };
