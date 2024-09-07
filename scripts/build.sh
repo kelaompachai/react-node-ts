@@ -1,6 +1,8 @@
 #!/bin/zsh
 
 tsc -p app/controller/tsconfig.json
+tsc -p app/view/tsconfig.json
+webpack --config app/controller/build/webpack.config.js
 # webpack something something something
 
 
