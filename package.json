@@ -4,7 +4,9 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "scripts/build.sh"
+    "build": "scripts/build.sh",
+    "unbuild": "scripts/unbuild.sh",
+    "start": "scripts/start.sh"
   },
   "keywords": [],
   "author": "",

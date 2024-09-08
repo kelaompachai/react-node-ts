@@ -2,7 +2,7 @@
 
 tsc -p app/controller/tsconfig.json
 tsc -p app/view/tsconfig.json
-webpack --config app/controller/build/webpack.config.js
+webpack --config app/controller/webpack.config.ts
 # webpack something something something
 
 

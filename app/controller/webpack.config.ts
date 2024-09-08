@@ -2,9 +2,9 @@ import path from 'path';
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const ENTRY: string = path.join(__dirname, '..', '..', 'view', 'build', 'index.js');
+const ENTRY: string = path.join(__dirname, '..', 'view', 'build', 'index.js');
 console.log('ENTRY:', ENTRY);
-const EXIT: string = path.join(__dirname, '..', '..', 'view', 'dist')
+const EXIT: string = path.join(__dirname, '..', 'view', 'dist')
 console.log('EXIT:', EXIT);
 
 
