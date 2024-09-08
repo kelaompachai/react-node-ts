@@ -4,11 +4,15 @@ import express from 'express';
 
 const app = express();
 const PORT: number = 3000;
-const FILE: string = path.join(__dirname, '..', '..', 'view', 'dist', 'index.html');
-console.log('FILE:', FILE);
+const HTML: string = path.join(__dirname, '..', '..', 'view', 'dist', 'index.html');
+const JAVASCRIPT: string = path.join(__dirname, '..', '..', 'view', 'dist', 'bundle.js');
 
-app.use('/', (req, res): void => {
-  res.sendFile(FILE);
+app.get('/', (req, res): void => {
+  res.sendFile(HTML);
+});
+
+app.get('/bundle.js', (req, res): void => {
+  res.sendFile(JAVASCRIPT);
 });
 
 app.listen(PORT, () => {

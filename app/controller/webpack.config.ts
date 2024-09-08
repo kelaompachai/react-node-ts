@@ -2,7 +2,7 @@ import path from 'path';
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const ENTRY: string = path.join(__dirname, '..', 'view', 'build', 'index.js');
+const ENTRY: string = path.join(__dirname, '..', 'view', 'build', 'index.jsx');
 console.log('ENTRY:', ENTRY);
 const EXIT: string = path.join(__dirname, '..', 'view', 'dist')
 console.log('EXIT:', EXIT);
@@ -34,7 +34,10 @@ const webpackOptions = (env: any, argv: any): any => {
         }
       ]
     },
-    plugins: [new HtmlWebpackPlugin()]
+    plugins: [new HtmlWebpackPlugin()],
+    resolve: {
+      extensions: ['.jsx']
+    }
   };
 
 };
