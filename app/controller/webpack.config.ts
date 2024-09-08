@@ -3,9 +3,7 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const ENTRY: string = path.join(__dirname, '..', 'view', 'index.tsx');
-console.log('ENTRY:', ENTRY);
 const EXIT: string = path.join(__dirname, '..', 'view', 'dist')
-console.log('EXIT:', EXIT);
 
 
 // may need to install @types/webpack for this to have any quality type checking
