@@ -1,13 +1,26 @@
 import path from 'path';
+import { Configuration } from 'webpack';
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const ENTRY: string = path.join(__dirname, '..', 'view', 'index.tsx');
 const EXIT: string = path.join(__dirname, '..', 'view', 'dist')
 
+// type Mode = 'production' | 'development';
+
+// interface Env {
+//   WEBPACK_BUNDLE: boolean,
+//   WEBPACK_BUILD: boolean,
+//   mode: Mode
+// };
+
+// interface Argv {
+//   config: string[],
+//   env: Env
+// }
 
 // may need to install @types/webpack for this to have any quality type checking
-const webpackOptions = (env: any, argv: any): any => {
+const webpackOptions = (env: any, argv: any): Configuration => {
   console.log(env);
   console.log(argv);
 
