@@ -7,7 +7,7 @@ frontend=$(tsc -p app/view/tsconfig.json --noEmit)
 # if there are no typechecking errors, run tests
 if [ "$backend" = "" ] && [ "$frontend" = "" ]
   then
-  node --experimental-vm-modules node_modules/jest/bin/jest.js
+  node --experimental-vm-modules node_modules/jest/bin/jest.js --config app/controller/jest.config.ts
 
 
 # if there are, print the errors to stdout
