@@ -2,7 +2,7 @@
   "name": "react-node-ts",
   "version": "1.0.0",
   "main": "",
-  "type": "module",
+  "type":"commonjs",
   "scripts": {
     "test": "scripts/test.sh",
     "build": "scripts/build.sh",

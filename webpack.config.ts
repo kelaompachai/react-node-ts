@@ -3,8 +3,8 @@ import { Configuration } from 'webpack';
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const ENTRY: string = path.join(__dirname, '..', 'view', 'index.tsx');
-const EXIT: string = path.join(__dirname, '..', 'view', 'dist')
+const ENTRY: string = path.join(__dirname, 'app', 'view', 'index.tsx');
+const EXIT: string = path.join(__dirname, 'app', 'view', 'dist')
 
 // type Mode = 'production' | 'development';
 
@@ -31,6 +31,7 @@ const webpackOptions = (env: any, argv: any): Configuration => {
       filename: 'bundle.js',
       clean: true
     },
+    mode: argv.env.mode,
     module: {
       rules: [
         {
