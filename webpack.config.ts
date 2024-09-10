@@ -50,7 +50,9 @@ const webpackOptions = (env: any, argv: any): Configuration => {
         }
       ]
     },
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'app', 'view', 'index.html')
+    })],
     resolve: {
       extensions: ['.jsx', '.tsx']
     }
