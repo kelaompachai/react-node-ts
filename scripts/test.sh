@@ -1,19 +1,24 @@
 #!/bin/zsh
 
 # type checking
-result=$(tsc -p app/controller/tsconfig.json --noEmit)
+backend=$(tsc -p app/controller/tsconfig.json --noEmit)
+frontend=$(tsc -p app/view/tsconfig.json --noEmit)
 
-# echo "$result"
+# if there are no typechecking errors, run tests
+if [ "$backend" = "" ] && [ "$frontend" = "" ]
+  then
+  node --experimental-vm-modules node_modules/jest/bin/jest.js
 
-# echo $result
-if [ "$result" = "" ]
-then
-echo "it works"
 
+# if there are, print the errors to stdout
 else
-echo hello
+  if [ "$frontend" != "" ]
+    then
+    echo "$frontend"
+  fi
+
+  if [ "$backend" != "" ]
+    then
+    echo "$backend"
+  fi
 fi
-
-
-# jest
-# node --experimental-vm-modules node_modules/jest/bin/jest.js
