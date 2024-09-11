@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-node app/controller/build/server/server.js
+node app/controller/build/server.js

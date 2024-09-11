@@ -2,7 +2,7 @@
 
 frontend=$(tsc -p app/view/tsconfig.json --noEmit)
 
-if [ $frontend = "" ]
+if [ "$frontend" = "" ]
   then
   node --experimental-vm-modules node_modules/jest/bin/jest.js --config app/view/jest.config.ts
 

@@ -4,8 +4,8 @@
   "main": "",
   "type": "commonjs",
   "scripts": {
-    "test front": "scripts/test-front.sh",
-    "test back": "scripts/test-back.sh",
+    "test-front": "scripts/test-front.sh",
+    "test-back": "scripts/test-back.sh",
     "build": "scripts/build.sh",
     "unbuild": "scripts/unbuild.sh",
     "start": "scripts/start.sh",
