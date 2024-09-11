@@ -28,8 +28,7 @@ const webpackOptions = (env: any, argv: any): Configuration => {
     entry: ENTRY,
     output: {
       path: EXIT,
-      filename: 'bundle.js',
-      clean: true
+      filename: 'bundle.js'
     },
     mode: argv.env.mode,
     module: {
